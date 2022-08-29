@@ -6,14 +6,14 @@
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 19:22:08 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/28 20:42:25 by #H42USER         ###   ########.fr       */
+/*   Updated: 2022/08/29 12:28:32 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {
-	int	*ptr;
+	int		*ptr;
 	size_t	n;
 
 	n = 0;
@@ -25,5 +25,5 @@ void	*ft_memalloc(size_t size)
 		ptr[n] = 0;
 		n++;
 	}
-	return ( (void *)ptr);
+	return ((void *)ptr);
 }

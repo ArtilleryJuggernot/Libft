@@ -6,18 +6,18 @@
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 22:13:25 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/28 22:29:54 by hjacquel         ###   ########.fr       */
+/*   Updated: 2022/08/29 12:13:00 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void(*f) (unsigned int, char *))
+void	ft_striteri(char *s, void (*f) (unsigned int, char *))
 {
 	int	n;
 
 	n = 0;
-	while(s[n])
+	while (s[n])
 	{
-		f(n,&s[n]);
+		f(n, &s[n]);
 		n++;
 	}
 }

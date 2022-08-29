@@ -6,11 +6,12 @@
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 22:31:18 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/28 22:41:45 by hjacquel         ###   ########.fr       */
+/*   Updated: 2022/08/29 12:13:54 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 int	ft_strlen(char const *str)
 {
 	int	n;
@@ -22,8 +23,6 @@ int	ft_strlen(char const *str)
 	}
 	return (n);
 }
-
-
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

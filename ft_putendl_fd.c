@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 23:33:41 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/29 12:27:33 by hjacquel         ###   ########.fr       */
+/*   Created: 2022/08/29 11:44:08 by hjacquel          #+#    #+#             */
+/*   Updated: 2022/08/29 12:17:26 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char const *str)
+#include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+
+void	ft_putendl_fd(char const *s, int fd)
 {
 	int	n;
 
 	n = 0;
-	while (str[n])
+	while (s[n])
 	{
+		ft_putchar_fd(s[n], fd);
 		n++;
 	}
-	return (n);
-}
-
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (s1[i] == s2[i] && i <= n)
-		i++;
-	if (i == n)
-		return (1);
-	return (0);
+	ft_putchar_fd('\n', fd);
 }
