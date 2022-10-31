@@ -6,7 +6,7 @@
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 21:52:29 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/28 22:02:00 by hjacquel         ###   ########.fr       */
+/*   Updated: 2022/08/31 16:05:01 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strnew(size_t size)
 {
 	char	*ptr;
-	int		n;
+	size_t	n;
 
 	n = 0;
 	ptr = malloc(sizeof(char) * size);

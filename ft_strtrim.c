@@ -6,7 +6,7 @@
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 01:00:30 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/29 12:15:08 by hjacquel         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:49:21 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -32,7 +32,7 @@ int	ft_strlen_blank(char const *str)
 	return (my_r);
 }
 
-char	*ft_strim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	char	*copy;
 	int		n;

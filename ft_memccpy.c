@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 19:22:08 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/08/31 16:08:30 by hjacquel         ###   ########.fr       */
+/*   Created: 2022/11/01 00:33:55 by hjacquel          #+#    #+#             */
+/*   Updated: 2022/11/01 00:57:12 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include <stddef.h>
 
-void	*ft_memalloc(size_t size)
+void	*ft_memccpy(void	*restrict dst, const void	*restrict src, int ch, size_t maxSize)
 {
-	int		*ptr;
-	size_t	n;
+	unsigned char		*tp;
+	const unsigned char	*fp;
+	unsigned char		uc;
 
-	n = 0;
-	ptr = malloc(size);
-	if (!ptr)
-		return (NULL);
-	while (n < size)
+	if (maxSize > 0) 
 	{
-		ptr[n] = 0;
-		n++;
+		tp = dst;
+		fp = src;
+		uc = ch;
 	}
-	return ((void *)ptr);
+	while (--maxSize != 0)
+	{
+		if ((*tp++ = *fp++) == uc)
+			return (tp);
+	}
+	return (0);
 }
