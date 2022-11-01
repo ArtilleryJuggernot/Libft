@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjacquel <hjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 00:33:55 by hjacquel          #+#    #+#             */
-/*   Updated: 2022/11/01 01:04:46 by hjacquel         ###   ########.fr       */
+/*   Created: 2022/11/01 01:00:51 by hjacquel          #+#    #+#             */
+/*   Updated: 2022/11/01 01:19:32 by hjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
 
-void	*ft_memccpy(void	*restrict dst, const void	*restrict src, int ch, size_t maxSize)
+void	*memchr(const void	*memoryBlock, int searchedChar, size_t size )
 {
-	unsigned char		*tp;
-	const unsigned char	*fp;
-	unsigned char		uc;
+	const char	*iterator;
 
-	if (maxSize > 0) 
+	iterator = (const char *) memoryBlock;
+	while (size--)
 	{
-		tp = dst;
-		fp = src;
-		uc = ch;
+		if (*iterator == searchedChar)
+			return ((void *)iterator);
+		iterator++;
 	}
-	while (maxSize-- != 0)
-	{
-		if ((*tp++ = *fp++) == uc)
-			return (tp);
-	}
-	return (0);
+	return (NULL);
 }
